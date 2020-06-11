@@ -1,5 +1,5 @@
 <h3>
-  {{leyenda}}
+  {{leyenda}} - {{progreso}}
 </h3>
 
 
@@ -14,13 +14,18 @@
     </button>
   </div>
 
-  <input type="text"
-        class="form-control"
-        placeholder=""
-        aria-label="Example text with two button addons"
-        aria-describedby="button-addon3"
-        name="progreso"
-        [(ngModel)]="progreso">
+  <input #txtProgress
+         type="number"
+         class="form-control"
+         placeholder=""
+         aria-label="Example text with two button addons"
+         aria-describedby="button-addon3"
+         name="progreso"
+         [(ngModel)]="progreso"
+         (ngModelChange)="onChanges($event)"
+         min="1"
+         max="100"
+        >
 
   <div class="input-group-append" id="button-addon4">
     <button

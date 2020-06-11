@@ -5,13 +5,13 @@
 
             <h4 class="card-title">Barra de progreso</h4>
             <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso + '%'"></div>
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso1" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 + '%'"></div>
             </div>
 
             <br>
 
             <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="progreso" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso + '%'"></div>
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="progreso2" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 + '%'"></div>
             </div>
           </div>
       </div>
@@ -23,7 +23,7 @@
       <div class="card">
           <div class="card-body">
 
-            <app-incrementador nombre="Progress Azul" [progreso]="20"></app-incrementador>
+            <app-incrementador (cambioValor)="this.progreso1 = $event" nombre="Progress Azul" [progreso]="progreso1"></app-incrementador>
 
           </div>
       </div>
@@ -33,7 +33,7 @@
     <div class="card">
         <div class="card-body">
 
-          <app-incrementador nombre="Progress Verde"></app-incrementador>
+          <app-incrementador (cambioValor)="this.progreso2 = $event" nombre="Progress Verde" [progreso]="progreso2"></app-incrementador>
 
         </div>
     </div>

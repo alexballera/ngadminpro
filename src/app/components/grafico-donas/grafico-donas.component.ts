@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafico-donas',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grafico-donas.component.scss']
 })
 export class GraficoDonasComponent implements OnInit {
+  @Input() chartLabels: string[] = [];
+  @Input() chartData: number[] = [];
+  @Input() chartType: string = '';
 
   constructor() { }
 

@@ -13,6 +13,7 @@ import { ChartsModule } from 'ng2-charts';
 
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas
     Graficas1Component,
     IncrementadorComponent,
     GraficoDonasComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     CommonModule,

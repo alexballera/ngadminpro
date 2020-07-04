@@ -15,6 +15,7 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { PromesasComponent } from './promesas/promesas.component';
     GraficoDonasComponent,
     AccountSettingsComponent,
     PromesasComponent,
+    RxjsComponent,
   ],
   imports: [
     CommonModule,

@@ -11,8 +11,22 @@ import { retry } from 'rxjs/operators';
 export class RxjsComponent implements OnInit {
 
   constructor() {
+    this.regresaObservable().pipe(
+      retry(2)
+    )
+    .subscribe(
+      numero => console.log('Subs', numero),
+      error => console.error('Error', error),
+      () => console.log('El observador terminó!')
+    );
 
-    const obs = new Observable(observer => {
+  }
+
+  ngOnInit(): void {
+  }
+
+  regresaObservable(): Observable<number> {
+    return new Observable(observer => {
 
       let contador = 0;
 
@@ -33,19 +47,6 @@ export class RxjsComponent implements OnInit {
         }
       }, 1000);
     });
-
-    obs.pipe(
-      retry(2)
-    )
-    .subscribe(
-      numero => console.log('Subs', numero),
-      error => console.error('Error', error),
-      () => console.log('El observador terminó!')
-    );
-
-  }
-
-  ngOnInit(): void {
   }
 
 }

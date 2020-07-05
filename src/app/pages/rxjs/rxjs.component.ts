@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Subscriber } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable, Subscriber, Subscription } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
 @Component({
@@ -8,10 +8,12 @@ import { map, filter } from 'rxjs/operators';
   styles: [
   ]
 })
-export class RxjsComponent implements OnInit {
+export class RxjsComponent implements OnInit, OnDestroy {
+
+  subsciption: Subscription;
 
   constructor() {
-    this.regresaObservable()
+    this.subsciption = this.regresaObservable()
     .subscribe(
       numero => console.log('Subs', numero),
       error => console.error('Error', error),
@@ -21,6 +23,10 @@ export class RxjsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
+    this.subsciption.unsubscribe();
   }
 
   regresaObservable(): Observable<any> {

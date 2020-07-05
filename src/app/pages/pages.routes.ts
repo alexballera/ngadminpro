@@ -12,12 +12,12 @@ const pagesRoutes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent, data: {titulo: 'Dashboard'} },
-      { path: 'progress', component: ProgressComponent, data: {titulo: 'Progress'} },
-      { path: 'graficas1', component: Graficas1Component, data: {titulo: 'Gráficas'} },
-      { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'} },
-      { path: 'rxjs', component: RxjsComponent, data: {titulo: 'RxJs'} },
-      { path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Ajustes del Tema'} },
+      { path: 'dashboard', component: DashboardComponent, data: {titulo: 'Dashboard', descripcion: 'Esta es la descripción de Dashboard'} },
+      { path: 'progress', component: ProgressComponent, data: {titulo: 'Progress', descripcion: 'Esta es la descripción de Progress'} },
+      { path: 'graficas1', component: Graficas1Component, data: {titulo: 'Gráficas', descripcion: 'Esta es la descripción de Gráficas'} },
+      { path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas', descripcion: 'Esta es la descripción de Promesas'} },
+      { path: 'rxjs', component: RxjsComponent, data: {titulo: 'RxJs', descripcion: 'Esta es la descripción de RxJs'} },
+      { path: 'account-settings', component: AccountSettingsComponent, data: {titulo: 'Ajustes del Tema', descripcion: 'Esta es la descripción de Ajustes'} },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ]
   },

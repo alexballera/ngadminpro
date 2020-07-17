@@ -23,7 +23,12 @@
       <div class="card">
           <div class="card-body">
 
-            <app-incrementador (cambioValor)="this.progreso1 = $event" nombre="Progress Azul" [progreso]="progreso1"></app-incrementador>
+            <app-incrementador (cambioValor)="this.progreso1 = $event"
+                                nombre="Progress Azul"
+                                [progreso]="progreso1"
+                                [btnClass]="'btn-info'"
+                                >
+            </app-incrementador>
 
           </div>
       </div>
@@ -33,7 +38,12 @@
     <div class="card">
         <div class="card-body">
 
-          <app-incrementador (cambioValor)="this.progreso2 = $event" nombre="Progress Verde" [progreso]="progreso2"></app-incrementador>
+          <app-incrementador (cambioValor)="this.progreso2 = $event"
+                             nombre="Progress Verde"
+                             [progreso]="progreso2"
+                             [btnClass]="'btn-success'"
+                             >
+          </app-incrementador>
 
         </div>
     </div>

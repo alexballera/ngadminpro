@@ -8,16 +8,13 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef }
 })
 export class IncrementadorComponent implements OnInit {
   @ViewChild('txtProgress') txtProgress: ElementRef;
-
   @Input() progreso: number = 50;
-
   @Input('nombre') leyenda: string = 'Leyenda';
-
+  @Input() btnClass: string = 'btn btn-primary';
   @Output() cambioValor: EventEmitter<number> = new EventEmitter();
 
-  constructor() {}
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.btnClass = `btn ${this.btnClass}`;
   }
 
   onChanges(newValue: number) {

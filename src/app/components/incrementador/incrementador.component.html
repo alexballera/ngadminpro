@@ -6,7 +6,7 @@
 <div class="input-group mb-3">
   <div class="input-group-prepend" id="button-addon3">
     <button
-    class="btn btn-primary"
+    [ngClass]="btnClass"
     type="button"
     (click)="cambiarValor(-5)"
     >
@@ -29,7 +29,7 @@
 
   <div class="input-group-append" id="button-addon4">
     <button
-    class="btn btn-primary"
+    [ngClass]="btnClass"
     type="button"
     (click)="cambiarValor(+5)"
     >

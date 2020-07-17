@@ -3,6 +3,7 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', component: NopagefoundComponent },
 ];
 
